@@ -9,7 +9,7 @@ const Header = () => {
     const navigate = useNavigate()
 
     return (
-        <div className={classes.header}>
+        <div className={classes.pageWrapper}>
             <div className={classes.logo}>Logo goes here...</div>
             <div className={classes.menuWrapper}>
                 {headerMenuList.map((menu, index) => {
@@ -21,12 +21,12 @@ const Header = () => {
                                 navigate(menu.path)
                             }}
                         >
-                            {menu.name}
+                            <div>{menu.name}</div>
                         </div>
                     )
                 })}
             </div>
-            <div className={classes.account}>account</div>
+            <div className={classes.accountwrapper}>Account</div>
         </div>
     )
 }

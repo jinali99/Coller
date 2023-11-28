@@ -2,6 +2,7 @@ import React from 'react'
 import classes from './categorySlider.module.css'
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react'
+// import categoryImage from '@src/assets/images/categoryImage'
 
 // Import Swiper styles
 import 'swiper/css'
@@ -12,7 +13,7 @@ import 'swiper/css/pagination'
 import { Grid, Pagination } from 'swiper/modules'
 
 const categorySlider = [
-    { name: 'SLIM DRAWER BOX' },
+    { name: 'Slim Drawer Box' },
     { name: 'TANDOM DRAWER BOX' },
     { name: 'PULL OUT' },
     { name: 'CORNER SOLUTION' },
@@ -30,11 +31,11 @@ const categorySlider = [
 
 const CategorySlider = () => {
     return (
-        <div className="category">
+        <div className={classes.category}>
             <div className={classes.title}>CATEGORY</div>
             {categorySlider && (
                 <Swiper
-                    slidesPerView={3}
+                    slidesPerView={4}
                     grid={{
                         rows: 2,
                         fill: 'row',
@@ -48,6 +49,7 @@ const CategorySlider = () => {
                 >
                     {categorySlider.map((item, index) => (
                         <SwiperSlide key={index}>
+                            {/* <img src={categoryImage} alt={index} /> */}
                             <div>{item.name}</div>
                         </SwiperSlide>
                     ))}

@@ -1,29 +1,25 @@
-.header {
-    background-color: #ded0b6;
-    color: black;
-    text-align: center;
-    height: 67px;
-    width: 100%;
+.pageWrapper {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
+    background-color: #d2e3c8;
+    color: #86a789;
 }
 .logo {
-    height: auto;
-    width: 100px;
-    align-content: flex-start;
-    text-indent: 10px;
-    align-items: center;
+    margin: 40px;
 }
+
 .menuWrapper {
-    justify-content: space-between;
     display: flex;
+    justify-content: space-between;
 }
 .menuList {
-    text-indent: 25px;
-    font-weight: 700;
+    margin: 20px;
+    font-size: 1.2rem;
+    font-weight: 500;
 }
-.account {
-    padding-right: 40px;
-    font-weight: 700;
+.accountwrapper {
+    margin: 40px;
+    font-size: 1.2rem;
+    font-weight: 500;
 }
