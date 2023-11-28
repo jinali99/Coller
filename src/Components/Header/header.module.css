@@ -2,8 +2,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #d2e3c8;
-    color: #86a789;
+    background-color: white;
+    color: black;
 }
 .logo {
     margin: 40px;

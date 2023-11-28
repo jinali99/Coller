@@ -2,7 +2,7 @@ import React from 'react'
 import classes from './categorySlider.module.css'
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react'
-// import categoryImage from '@src/assets/images/categoryImage'
+// import categoryImage from '/Images/category.png'
 
 // Import Swiper styles
 import 'swiper/css'
@@ -31,7 +31,7 @@ const categorySlider = [
 
 const CategorySlider = () => {
     return (
-        <div className={classes.category}>
+        <div className={classes.categoryWrapper}>
             <div className={classes.title}>CATEGORY</div>
             {categorySlider && (
                 <Swiper
@@ -49,8 +49,13 @@ const CategorySlider = () => {
                 >
                     {categorySlider.map((item, index) => (
                         <SwiperSlide key={index}>
-                            {/* <img src={categoryImage} alt={index} /> */}
-                            <div>{item.name}</div>
+                            <div c>
+                                <div>{item.name}</div>
+                                <img
+                                    src={'./Images/category.png'}
+                                    alt={index}
+                                />
+                            </div>
                         </SwiperSlide>
                     ))}
                 </Swiper>
