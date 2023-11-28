@@ -1,0 +1,29 @@
+.header {
+    background-color: #ded0b6;
+    color: black;
+    text-align: center;
+    height: 67px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo {
+    height: auto;
+    width: 100px;
+    align-content: flex-start;
+    text-indent: 10px;
+    align-items: center;
+}
+.menuWrapper {
+    justify-content: space-between;
+    display: flex;
+}
+.menuList {
+    text-indent: 25px;
+    font-weight: 700;
+}
+.account {
+    padding-right: 40px;
+    font-weight: 700;
+}
