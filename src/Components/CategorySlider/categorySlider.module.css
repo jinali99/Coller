@@ -1,13 +1,16 @@
 .categoryWrapper {
-    background-color: #fde5d4;
+    padding-bottom: 20px;
+}
+.swiperContain {
+    padding-bottom: 20px;
 }
 .title {
     font-weight: 700;
     font-size: 1.5rem;
-    color: black;
+    color: #31304d;
     text-align: center;
     align-items: center;
-    padding-top: 20px;
+    padding: 30px;
 }
 .categorySwipper {
     width: 100%;
@@ -21,9 +24,13 @@
 .categorySwipper :global(.swiper-slide) {
     text-align: center;
     font-size: 18px;
-    background: #fff;
+    background: #b6bbc4;
     display: flex;
     justify-content: center;
     align-items: center;
-    
+}
+.categoryName {
+    color: #31304d;
+    font-weight: 500;
+    font-size: 1.1rem;
 }

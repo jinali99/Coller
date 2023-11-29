@@ -10,7 +10,14 @@ const Header = () => {
 
     return (
         <div className={classes.pageWrapper}>
-            <div className={classes.logo}>Logo goes here...</div>
+            <div className={classes.logo}>
+                <img
+                    src={'/Images/logo.png'}
+                    alt="logo"
+                    height={70}
+                    width={240}
+                />
+            </div>
             <div className={classes.menuWrapper}>
                 {headerMenuList.map((menu, index) => {
                     return (

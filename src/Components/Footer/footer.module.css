@@ -1,0 +1,21 @@
+.footerWrapper {
+    background-color: #161a30;
+    min-height: 300px;
+    padding: 20px;
+    color: white;
+    font-weight: 400;
+    display: flex;
+    justify-content: space-between;
+}
+.footerLeft {
+    margin: 30px;
+}
+.contain {
+    width: 400px;
+}
+.footerMiddle {
+    margin: 30px;
+}
+.footerRight {
+    margin: 30px;
+}

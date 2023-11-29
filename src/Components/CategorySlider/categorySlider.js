@@ -13,7 +13,7 @@ import 'swiper/css/pagination'
 import { Grid, Pagination } from 'swiper/modules'
 
 const categorySlider = [
-    { name: 'Slim Drawer Box' },
+    { name: 'SLIM DRAWER BOX' },
     { name: 'TANDOM DRAWER BOX' },
     { name: 'PULL OUT' },
     { name: 'CORNER SOLUTION' },
@@ -34,31 +34,37 @@ const CategorySlider = () => {
         <div className={classes.categoryWrapper}>
             <div className={classes.title}>CATEGORY</div>
             {categorySlider && (
-                <Swiper
-                    slidesPerView={4}
-                    grid={{
-                        rows: 2,
-                        fill: 'row',
-                    }}
-                    spaceBetween={30}
-                    pagination={{
-                        clickable: true,
-                    }}
-                    modules={[Grid, Pagination]}
-                    className={classes.categorySwipper}
-                >
-                    {categorySlider.map((item, index) => (
-                        <SwiperSlide key={index}>
-                            <div c>
-                                <div>{item.name}</div>
-                                <img
-                                    src={'./Images/category.png'}
-                                    alt={index}
-                                />
-                            </div>
-                        </SwiperSlide>
-                    ))}
-                </Swiper>
+                <div className={classes.swiperContain}>
+                    <Swiper
+                        slidesPerView={4}
+                        grid={{
+                            rows: 2,
+                            fill: 'row',
+                        }}
+                        spaceBetween={30}
+                        pagination={{
+                            clickable: true,
+                        }}
+                        modules={[Grid, Pagination]}
+                        className={classes.categorySwipper}
+                    >
+                        {categorySlider.map((item, index) => (
+                            <SwiperSlide key={index}>
+                                <div>
+                                    <img
+                                        src={'/Images/categoryImage.jpeg'}
+                                        alt={index}
+                                        height={60}
+                                        width={60}
+                                    />
+                                    <div className={classes.categoryName}>
+                                        {item.name}
+                                    </div>
+                                </div>
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
+                </div>
             )}
         </div>
     )
