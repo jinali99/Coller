@@ -152,23 +152,25 @@ const Category = () => {
             <h1 className={classes.categoryTitle}>
                 {categoryname.toUpperCase()}
             </h1>
-            {ProductData.map((item) => {
-                return (
-                    item.categoryName === categoryname && (
-                        <div className={classes.productCardWrapper}>
-                            <ProductCard
-                                key={item.sku}
-                                categoryName={item.categoryName}
-                                name={item.name}
-                                description={item.description}
-                                price={item.price}
-                                sku={item.sku}
-                                image={item.image}
-                            />
-                        </div>
+            <div className={classes.container}>
+                {ProductData.map((item) => {
+                    return (
+                        item.categoryName === categoryname && (
+                            <div className={classes.productCardWrapper}>
+                                <ProductCard
+                                    key={item.sku}
+                                    categoryName={item.categoryName}
+                                    name={item.name}
+                                    description={item.description}
+                                    price={item.price}
+                                    sku={item.sku}
+                                    image={item.image}
+                                />
+                            </div>
+                        )
                     )
-                )
-            })}
+                })}
+            </div>
         </div>
     )
 }
