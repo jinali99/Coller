@@ -2,13 +2,14 @@ import { get } from 'lodash'
 import React from 'react'
 import { useParams } from 'react-router-dom'
 import ProductCard from '../ProductCard/productCard'
+import classes from './category.module.css'
 
 const ProductData = [
     {
         categoryName: 'slimdrawerbox',
         name: 'slimdrawerbox',
         description:
-            'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+            'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.',
         price: 250,
         sku: 'slimdrawerbox',
         image: '/Images/slimdrawerbox.jpeg',
@@ -17,7 +18,7 @@ const ProductData = [
         categoryName: 'slimdrawerbox',
         name: 'slimdrawerbox1',
         description:
-            'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+            'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.',
         price: 250,
         sku: 'slimdrawerbox',
         image: '/Images/slimdrawerbox.jpeg',
@@ -26,7 +27,7 @@ const ProductData = [
         categoryName: 'tandomdrawerbox',
         name: 'tandomdrawerbox',
         description:
-            'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+            'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.',
         price: 280,
         sku: 'tandomdrawerbox',
         image: '/Images/tandomdrawerbox.png',
@@ -35,7 +36,7 @@ const ProductData = [
         categoryName: 'pulldown',
         name: 'pulldown',
         description:
-            'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+            'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.',
         price: 300,
         sku: 'pulldown',
         image: '/Images/pulldown.jpg',
@@ -44,7 +45,7 @@ const ProductData = [
         categoryName: 'cutlery',
         name: 'cutlery',
         description:
-            'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+            'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.',
         price: 350,
         sku: 'cutlery',
         image: '/Images/cutlery.jpeg',
@@ -53,7 +54,7 @@ const ProductData = [
         categoryName: 'pantry',
         name: 'pantry',
         description:
-            'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+            'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.',
         price: 400,
         sku: 'pantry',
         image: '/Images/pantry.jpg',
@@ -62,7 +63,7 @@ const ProductData = [
         categoryName: 'elevator',
         name: 'elevator',
         description:
-            'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+            'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.',
         price: 450,
         sku: 'elevator',
         image: '/Images/elevator.jpg',
@@ -71,7 +72,7 @@ const ProductData = [
         categoryName: 'quadrochannel',
         name: 'quadrochannel',
         description:
-            'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+            'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.',
         price: 500,
         sku: 'quadrochannel',
         image: '/Images/quadrochannel.jpg',
@@ -80,7 +81,7 @@ const ProductData = [
         categoryName: 'kitchenaccesories',
         name: 'kitchenaccesories',
         description:
-            'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+            'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.',
         price: 550,
         sku: 'kitchenaccesories',
         image: '/Images/kitchenaccesories.jpeg',
@@ -89,7 +90,7 @@ const ProductData = [
         categoryName: 'hingeseriesunit',
         name: 'hingeseriesunit',
         description:
-            'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+            'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.',
         price: 600,
         sku: 'hingeseriesunit',
         image: '/Images/hingeseriesunit.jpg',
@@ -98,7 +99,7 @@ const ProductData = [
         categoryName: 'rollingshutterbasket',
         name: 'rollingshutterbasket',
         description:
-            'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+            'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.',
         price: 650,
         sku: 'rollingshutterbasket',
         image: '/Images/rollingshutterbasket.jpeg',
@@ -107,7 +108,7 @@ const ProductData = [
         categoryName: 'doorcloser',
         name: 'doorcloser',
         description:
-            'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+            'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.',
         price: 700,
         sku: 'doorcloser',
         image: '/Images/doorcloser.jpg',
@@ -116,7 +117,7 @@ const ProductData = [
         categoryName: 'accesories',
         name: 'accesories',
         description:
-            'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+            'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.',
         price: 750,
         sku: 'accesories',
         image: '/Images/kitchenaccesories.jpeg',
@@ -125,7 +126,7 @@ const ProductData = [
         categoryName: 'cornersolution',
         name: 'cornersolution',
         description:
-            'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+            'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.',
         price: 800,
         sku: 'cornersolution',
         image: '/Images/cornersolution.jpg',
@@ -134,7 +135,7 @@ const ProductData = [
         categoryName: 'tallunit',
         name: 'tallunit',
         description:
-            'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+            'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.',
         price: 850,
         sku: 'tallunit',
         image: '/Images/tallunit.jpg',
@@ -148,19 +149,23 @@ const Category = () => {
     const categoryname = get(params, 'categoryname')
     return (
         <div>
-            <h1>{categoryname.toUpperCase()}</h1>
+            <h1 className={classes.categoryTitle}>
+                {categoryname.toUpperCase()}
+            </h1>
             {ProductData.map((item) => {
                 return (
                     item.categoryName === categoryname && (
-                        <ProductCard
-                            key={item.sku}
-                            categoryName={item.categoryName}
-                            name={item.name}
-                            description={item.description}
-                            price={item.price}
-                            sku={item.sku}
-                            image={item.image}
-                        />
+                        <div className={classes.productCardWrapper}>
+                            <ProductCard
+                                key={item.sku}
+                                categoryName={item.categoryName}
+                                name={item.name}
+                                description={item.description}
+                                price={item.price}
+                                sku={item.sku}
+                                image={item.image}
+                            />
+                        </div>
                     )
                 )
             })}

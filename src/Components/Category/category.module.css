@@ -1,0 +1,9 @@
+.productCardWrapper {
+    max-width: 250px;
+    padding: 20px;
+    display: flex;
+}
+.categoryTitle {
+    color: #161a30;
+    align-items: center;
+}

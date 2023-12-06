@@ -1,12 +1,18 @@
 import React from 'react'
+import classes from './productCard.module.css'
 
 const ProductCard = (props) => {
     return (
-        <div>
+        <div className={classes.productCard}>
             <img src={props.image} alt={props.name} height={200} width={200} />
-            <div>{props.name}</div>
-            <div>{props.price}</div>
-            <div>{props.description}</div>
+            <div className={classes.productName}>
+                <span className={classes.name}>Name : </span>
+                {props.name}
+            </div>
+            <div className={classes.des}>{props.description}</div>
+            <div>
+                <span className={classes.price}>Price</span> :{props.price}
+            </div>
         </div>
     )
 }
