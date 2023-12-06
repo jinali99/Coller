@@ -13,15 +13,15 @@ import classes from './productSlider.module.css'
 import { EffectCoverflow, Pagination, Autoplay } from 'swiper/modules'
 
 const sliderData = [
-    { image: 'https://swiperjs.com/demos/images/nature-1.jpg' },
-    { image: 'https://swiperjs.com/demos/images/nature-2.jpg' },
-    { image: 'https://swiperjs.com/demos/images/nature-3.jpg' },
-    { image: 'https://swiperjs.com/demos/images/nature-4.jpg' },
-    { image: 'https://swiperjs.com/demos/images/nature-5.jpg' },
-    { image: 'https://swiperjs.com/demos/images/nature-6.jpg' },
-    { image: 'https://swiperjs.com/demos/images/nature-7.jpg' },
-    { image: 'https://swiperjs.com/demos/images/nature-8.jpg' },
-    { image: 'https://swiperjs.com/demos/images/nature-9.jpg' },
+    { image: '/Images/product.jpg' },
+    { image: '/Images/product2.jpg' },
+    { image: '/Images/product3.jpg' },
+    { image: '/Images/product4.jpg' },
+    { image: '/Images/product5.jpg' },
+    { image: '/Images/product6.jpg' },
+    { image: '/Images/product7.jpg' },
+    { image: '/Images/product8.jpg' },
+    { image: '/Images/product3.jpg' },
 ]
 const ProductSlider = () => {
     return (
