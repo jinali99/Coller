@@ -7,6 +7,7 @@ import Aboutus from './Components/AboutUs/aboutus'
 import Dashboard from './Components/Dashboard/dashboard'
 import { BrowserRouter } from 'react-router-dom'
 import Product from './Components/Products/product'
+import Category from './Components/Category/category'
 
 const Layout = (props) => {
     return (
@@ -52,6 +53,14 @@ function App() {
                     element={
                         <Layout>
                             <Product />
+                        </Layout>
+                    }
+                />
+                <Route
+                    path="/category/:categoryname"
+                    element={
+                        <Layout>
+                            <Category />
                         </Layout>
                     }
                 />

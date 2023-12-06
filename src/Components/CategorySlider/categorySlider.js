@@ -11,25 +11,28 @@ import 'swiper/css/pagination'
 
 // import required modules
 import { Grid, Pagination } from 'swiper/modules'
+import { useNavigate } from 'react-router'
 
 const categorySlider = [
-    { name: 'SLIM DRAWER BOX' },
-    { name: 'TANDOM DRAWER BOX' },
-    { name: 'PULL OUT' },
-    { name: 'CORNER SOLUTION' },
-    { name: 'TALL UNIT' },
-    { name: 'PANTRY UNIT' },
-    { name: 'ELEVATOR BASKET' },
-    { name: 'CUTLERY' },
-    { name: 'QUADRO CHANNEL' },
-    { name: 'KITCHEN ACCESORIES' },
-    { name: 'HINGE SERIES UNIT' },
-    { name: 'ROLLING SHUTTER BASKET' },
-    { name: 'DOOR CLOSER' },
-    { name: 'ACCESORIES' },
+    { name: 'SLIM DRAWER BOX', url: '/category/slimdrawerbox' },
+    { name: 'TANDOM DRAWER BOX', url: '/category/tandomdrawerbox' },
+    { name: 'PULL OUT', url: '/category/pulldown' },
+    { name: 'CUTLERY', url: '/category/cutlery' },
+    { name: 'PANTRY UNIT', url: '/category/pantry' },
+    { name: 'ELEVATOR BASKET', url: '/category/elevator' },
+    { name: 'CUTLERY', url: '/category/cutlery' },
+    { name: 'QUADRO CHANNEL', url: '/category/quadrochannel' },
+    { name: 'KITCHEN ACCESORIES', url: '/category/kitchenaccesories' },
+    { name: 'HINGE SERIES UNIT', url: '/category/hingeseriesunit' },
+    { name: 'ROLLING SHUTTER BASKET', url: '/category/rollingshutterbasket' },
+    { name: 'DOOR CLOSER', url: '/category/doorcloser' },
+    { name: 'ACCESORIES', url: '/category/accesories' },
+    { name: 'CORNER SOLUTION', url: '/category/cornersolution' },
+    { name: 'TALL UNIT', url: '/category/tallunit' },
 ]
 
 const CategorySlider = () => {
+    const navigate = useNavigate()
     return (
         <div className={classes.categoryWrapper}>
             <div className={classes.title}>CATEGORY</div>
@@ -50,7 +53,7 @@ const CategorySlider = () => {
                     >
                         {categorySlider.map((item, index) => (
                             <SwiperSlide key={index}>
-                                <div>
+                                <div onClick={() => navigate(item.url)}>
                                     <img
                                         src={'/Images/categoryImage.jpeg'}
                                         alt={index}
