@@ -7,6 +7,7 @@
     display: flex;
 }
 .categoryTitle {
-    color: #161a30;
+    color: #31304d;
     align-items: center;
+    text-align: center;
 }

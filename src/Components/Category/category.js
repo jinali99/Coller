@@ -7,7 +7,7 @@ import classes from './category.module.css'
 const ProductData = [
     {
         categoryName: 'slimdrawerbox',
-        name: 'slimdrawerbox',
+        name: 'slim Drawer Box',
         description:
             'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.',
         price: 250,
@@ -16,7 +16,7 @@ const ProductData = [
     },
     {
         categoryName: 'slimdrawerbox',
-        name: 'slimdrawerbox1',
+        name: 'Slim Drawer Box1',
         description:
             'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.',
         price: 250,
@@ -25,7 +25,7 @@ const ProductData = [
     },
     {
         categoryName: 'tandomdrawerbox',
-        name: 'tandomdrawerbox',
+        name: 'Tandom Drawer Box',
         description:
             'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.',
         price: 280,
@@ -34,7 +34,7 @@ const ProductData = [
     },
     {
         categoryName: 'pulldown',
-        name: 'pulldown',
+        name: 'Pull Down',
         description:
             'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.',
         price: 300,
@@ -43,7 +43,7 @@ const ProductData = [
     },
     {
         categoryName: 'cutlery',
-        name: 'cutlery',
+        name: 'Cutlery',
         description:
             'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.',
         price: 350,
@@ -52,7 +52,7 @@ const ProductData = [
     },
     {
         categoryName: 'pantry',
-        name: 'pantry',
+        name: 'Pantry',
         description:
             'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.',
         price: 400,
@@ -61,7 +61,7 @@ const ProductData = [
     },
     {
         categoryName: 'elevator',
-        name: 'elevator',
+        name: 'Elevator',
         description:
             'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.',
         price: 450,
@@ -70,7 +70,7 @@ const ProductData = [
     },
     {
         categoryName: 'quadrochannel',
-        name: 'quadrochannel',
+        name: 'Quadro Channel',
         description:
             'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.',
         price: 500,
@@ -79,7 +79,7 @@ const ProductData = [
     },
     {
         categoryName: 'kitchenaccesories',
-        name: 'kitchenaccesories',
+        name: 'Kitchen Accesories',
         description:
             'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.',
         price: 550,
@@ -88,7 +88,7 @@ const ProductData = [
     },
     {
         categoryName: 'hingeseriesunit',
-        name: 'hingeseriesunit',
+        name: 'Hingeseries Unit',
         description:
             'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.',
         price: 600,
@@ -97,7 +97,7 @@ const ProductData = [
     },
     {
         categoryName: 'rollingshutterbasket',
-        name: 'rollingshutterbasket',
+        name: 'Rolling Shutter Basket',
         description:
             'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.',
         price: 650,
@@ -106,7 +106,7 @@ const ProductData = [
     },
     {
         categoryName: 'doorcloser',
-        name: 'doorcloser',
+        name: 'Door Closer',
         description:
             'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.',
         price: 700,
@@ -115,7 +115,7 @@ const ProductData = [
     },
     {
         categoryName: 'accesories',
-        name: 'accesories',
+        name: 'Accesories',
         description:
             'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.',
         price: 750,
@@ -124,7 +124,7 @@ const ProductData = [
     },
     {
         categoryName: 'cornersolution',
-        name: 'cornersolution',
+        name: 'Cornersolution',
         description:
             'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.',
         price: 800,
@@ -133,7 +133,7 @@ const ProductData = [
     },
     {
         categoryName: 'tallunit',
-        name: 'tallunit',
+        name: 'Tall Unit',
         description:
             'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.',
         price: 850,
