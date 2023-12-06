@@ -1,21 +1,20 @@
 .footerWrapper {
-    background-color: #161a30;
-    min-height: 300px;
-    padding: 20px;
+    background-color: #31304d;
     color: white;
-    font-weight: 400;
+}
+
+.footerTopRow {
     display: flex;
     justify-content: space-between;
+    padding: 40px;
 }
 .footerLeft {
-    margin: 30px;
-}
-.contain {
-    width: 400px;
+    display: flex;
+    flex-direction: column;
 }
 .footerMiddle {
-    margin: 30px;
+}
+.footerMiddlecontent {
 }
 .footerRight {
-    margin: 30px;
 }
