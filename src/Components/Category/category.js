@@ -1,7 +1,7 @@
 import { get } from 'lodash'
 import React from 'react'
 import { useParams } from 'react-router-dom'
-import Product from '../Products/product'
+import ProductCard from '../ProductCard/productCard'
 
 const ProductData = [
     {
@@ -38,7 +38,7 @@ const ProductData = [
             'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
         price: 300,
         sku: 'pulldown',
-        image: '/Images/pulldown.jpeg',
+        image: '/Images/pulldown.jpg',
     },
     {
         categoryName: 'cutlery',
@@ -56,7 +56,7 @@ const ProductData = [
             'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
         price: 400,
         sku: 'pantry',
-        image: '/Images/pantry.jpeg',
+        image: '/Images/pantry.jpg',
     },
     {
         categoryName: 'elevator',
@@ -65,7 +65,7 @@ const ProductData = [
             'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
         price: 450,
         sku: 'elevator',
-        image: '/Images/elevator.jpeg',
+        image: '/Images/elevator.jpg',
     },
     {
         categoryName: 'quadrochannel',
@@ -74,7 +74,7 @@ const ProductData = [
             'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
         price: 500,
         sku: 'quadrochannel',
-        image: '/Images/quadrochannel.jpeg',
+        image: '/Images/quadrochannel.jpg',
     },
     {
         categoryName: 'kitchenaccesories',
@@ -92,7 +92,7 @@ const ProductData = [
             'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
         price: 600,
         sku: 'hingeseriesunit',
-        image: '/Images/hingeseriesunit.jpeg',
+        image: '/Images/hingeseriesunit.jpg',
     },
     {
         categoryName: 'rollingshutterbasket',
@@ -110,7 +110,7 @@ const ProductData = [
             'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
         price: 700,
         sku: 'doorcloser',
-        image: '/Images/doorcloser.jpeg',
+        image: '/Images/doorcloser.jpg',
     },
     {
         categoryName: 'accesories',
@@ -128,7 +128,7 @@ const ProductData = [
             'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
         price: 800,
         sku: 'cornersolution',
-        image: '/Images/cornersolution.jpeg',
+        image: '/Images/cornersolution.jpg',
     },
     {
         categoryName: 'tallunit',
@@ -137,7 +137,7 @@ const ProductData = [
             'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
         price: 850,
         sku: 'tallunit',
-        image: '/Images/tallunit.jpeg',
+        image: '/Images/tallunit.jpg',
     },
 ]
 
@@ -152,7 +152,7 @@ const Category = () => {
             {ProductData.map((item) => {
                 return (
                     item.categoryName === categoryname && (
-                        <Product
+                        <ProductCard
                             key={item.sku}
                             categoryName={item.categoryName}
                             name={item.name}
