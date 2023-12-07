@@ -8,6 +8,9 @@ import Dashboard from './Components/Dashboard/dashboard'
 import { BrowserRouter } from 'react-router-dom'
 import Product from './Components/Products/product'
 import Category from './Components/Category/category'
+import Account from './Components/Account/account'
+import Wishlist from './Components/Wishlist/wishlist'
+import Cart from './Components/Cart/cart'
 
 const Layout = (props) => {
     return (
@@ -64,9 +67,30 @@ function App() {
                         </Layout>
                     }
                 />
-                <Route path="/wishlist" element={<Layout></Layout>} />
-                <Route path="/cart" element={<Layout></Layout>} />
-                <Route path="/account" element={<Layout></Layout>} />
+                <Route
+                    path="/wishlist"
+                    element={
+                        <Layout>
+                            <Wishlist />
+                        </Layout>
+                    }
+                />
+                <Route
+                    path="/cart"
+                    element={
+                        <Layout>
+                            <Cart />
+                        </Layout>
+                    }
+                />
+                <Route
+                    path="/account"
+                    element={
+                        <Layout>
+                            <Account />
+                        </Layout>
+                    }
+                />
             </Routes>
         </BrowserRouter>
     )
