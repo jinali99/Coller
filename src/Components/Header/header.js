@@ -2,6 +2,10 @@ import React from 'react'
 import classes from './header.module.css'
 import { headerMenuList } from '../../constant'
 import { useNavigate } from 'react-router'
+import { IoIosHeartEmpty } from 'react-icons/io'
+import { MdAccountCircle } from 'react-icons/md'
+import { FaCartShopping } from 'react-icons/fa6'
+
 // import { useWindowSize } from "../../hooks/useWindowSize";
 
 const Header = () => {
@@ -33,7 +37,17 @@ const Header = () => {
                     )
                 })}
             </div>
-            <div className={classes.accountwrapper}>Account</div>
+            <div className={classes.accountwrapper}>
+                <div onClick={() => navigate('/wishlist')}>
+                    <IoIosHeartEmpty size={40} color="#F0ECE5" />
+                </div>
+                <div onClick={() => navigate('/cart')}>
+                    <FaCartShopping size={40} color="#F0ECE5" />
+                </div>
+                <div onClick={() => navigate('/account')}>
+                    <MdAccountCircle size={40} color="#F0ECE5" />
+                </div>
+            </div>
         </div>
     )
 }

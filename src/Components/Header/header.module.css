@@ -20,6 +20,9 @@
 }
 .accountwrapper {
     margin: 40px;
+    display: flex;
     font-size: 1.2rem;
     font-weight: 500;
+    gap: 30px;
+    cursor: pointer;
 }

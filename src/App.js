@@ -64,6 +64,9 @@ function App() {
                         </Layout>
                     }
                 />
+                <Route path="/wishlist" element={<Layout></Layout>} />
+                <Route path="/cart" element={<Layout></Layout>} />
+                <Route path="/account" element={<Layout></Layout>} />
             </Routes>
         </BrowserRouter>
     )

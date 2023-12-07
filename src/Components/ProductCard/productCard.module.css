@@ -14,7 +14,7 @@
 }
 .price {
     font-size: 1.1rem;
-    font-weight: 600;
+    font-weight: 700;
     color: #161a30;
 }
 .action {
@@ -31,4 +31,10 @@
     background-color: #f0ece5;
     color: #161a30;
     border: 1px solid #161a30;
+}
+.wishlist {
+    width: 100%;
+    justify-content: flex-end;
+    display: flex;
+    cursor: pointer;
 }
