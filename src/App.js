@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes, redirect } from 'react-router-dom'
 import './App.css'
 import Footer from './Components/Footer/footer'
 import Header from './Components/Header/header'
@@ -11,6 +11,7 @@ import Category from './Components/Category/category'
 import Account from './Components/Account/account'
 import Wishlist from './Components/Wishlist/wishlist'
 import Cart from './Components/Cart/cart'
+import PageNotFound from './Components/PageNotFound/pageNotFound'
 
 const Layout = (props) => {
     return (
@@ -37,6 +38,7 @@ function App() {
                 />
                 <Route
                     path="/about"
+                    exact
                     element={
                         <Layout>
                             <Aboutus />
@@ -45,6 +47,7 @@ function App() {
                 />
                 <Route
                     path="/contact"
+                    exact
                     element={
                         <Layout>
                             <Contactus />
@@ -53,6 +56,7 @@ function App() {
                 />
                 <Route
                     path="/products"
+                    exact
                     element={
                         <Layout>
                             <Product />
@@ -61,6 +65,7 @@ function App() {
                 />
                 <Route
                     path="/category/:categoryName"
+                    exact
                     element={
                         <Layout>
                             <Category />
@@ -69,6 +74,7 @@ function App() {
                 />
                 <Route
                     path="/wishlist"
+                    exact
                     element={
                         <Layout>
                             <Wishlist />
@@ -77,6 +83,7 @@ function App() {
                 />
                 <Route
                     path="/cart"
+                    exact
                     element={
                         <Layout>
                             <Cart />
@@ -85,12 +92,14 @@ function App() {
                 />
                 <Route
                     path="/account"
+                    exact
                     element={
                         <Layout>
                             <Account />
                         </Layout>
                     }
                 />
+                <Route path="*" element={<PageNotFound />} />
             </Routes>
         </BrowserRouter>
     )
