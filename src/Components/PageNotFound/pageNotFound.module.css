@@ -1,0 +1,13 @@
+.notFound {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    color: #161a30;
+}
+.notFound h2 {
+    font-size: 55px;
+}
+.notFound p {
+    font-size: 30px;
+}
