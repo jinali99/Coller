@@ -3,13 +3,19 @@ import classes from './productCard.module.css'
 import Button from '../Button/button'
 import { FaIndianRupeeSign } from 'react-icons/fa6'
 import { FaRegHeart } from 'react-icons/fa'
+import { useDispatch } from 'react-redux'
+import { addToCart } from '../../data/reducer/cartSlice'
 
 const ProductCard = (props) => {
     const { rating, sku, name, price, image, stock, qty, id } = props
     const [wishlist, setWishlist] = useState(null)
     const [wishlistIds, setWishlistIds] = useState(null)
-    const [addCart, setAddCart] = useState(null)
-    const quntity = 0
+    const dispatch = useDispatch()
+    const product = { id, name, price, qty, sku, stock, image }
+
+    const handleAddToCart = () => {
+        dispatch(addToCart(product))
+    }
 
     const button = useMemo(() => {
         if (stock === 'IN_STOCK') {
@@ -19,7 +25,7 @@ const ProductCard = (props) => {
                     priority="high"
                     type="submit"
                     onClick={() => {
-                        setAddCart(id)
+                        handleAddToCart()
                     }}
                 >
                     ADD TO CARD
@@ -38,22 +44,7 @@ const ProductCard = (props) => {
                 </Button>
             )
         }
-        if (quntity > 0) {
-            return (
-                <Button
-                    className={classes.action}
-                    priority="high"
-                    type="submit"
-                    onClick={() => {
-                        console.log('clicked')
-                        setAddCart(id)
-                    }}
-                >
-                    ADD TO CARD
-                </Button>
-            )
-        }
-    }, [id, stock])
+    }, [handleAddToCart, stock])
 
     return (
         <div className={classes.productCard}>

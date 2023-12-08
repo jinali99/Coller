@@ -3,7 +3,7 @@
     justify-content: space-between;
     align-items: center;
     background-color: #31304d;
-    color: white;
+    color: #f0ece5;
 }
 .logo {
     margin: 20px;
@@ -25,4 +25,18 @@
     font-weight: 500;
     gap: 30px;
     cursor: pointer;
+}
+.cartCounter {
+    position: absolute;
+    top: 30px;
+    right: 100px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0ece5;
+    color: #31304d;
+    border-radius: 50%;
+    font-size: 1rem;
 }

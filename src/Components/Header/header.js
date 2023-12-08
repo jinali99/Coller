@@ -5,12 +5,16 @@ import { useNavigate } from 'react-router'
 import { IoIosHeartEmpty } from 'react-icons/io'
 import { MdAccountCircle } from 'react-icons/md'
 import { FaCartShopping } from 'react-icons/fa6'
+import { useSelector } from 'react-redux'
+import { cartCounter } from '../../data/selector/cart.selector'
 
 // import { useWindowSize } from "../../hooks/useWindowSize";
 
 const Header = () => {
     // const { isMobile } = useWindowSize();
     const navigate = useNavigate()
+    const counter = useSelector(cartCounter)
+    console.log('counter', counter)
 
     return (
         <div className={classes.pageWrapper}>
@@ -43,6 +47,9 @@ const Header = () => {
                 </div>
                 <div onClick={() => navigate('/cart')}>
                     <FaCartShopping size={40} color="#F0ECE5" />
+                    <span className={classes.cartCounter}>
+                        {counter.length}
+                    </span>
                 </div>
                 <div onClick={() => navigate('/account')}>
                     <MdAccountCircle size={40} color="#F0ECE5" />
