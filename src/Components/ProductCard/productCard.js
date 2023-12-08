@@ -1,27 +1,60 @@
-import React, { useState } from 'react'
+import React, { useMemo, useState } from 'react'
 import classes from './productCard.module.css'
 import Button from '../Button/button'
 import { FaIndianRupeeSign } from 'react-icons/fa6'
 import { FaRegHeart } from 'react-icons/fa'
 
 const ProductCard = (props) => {
-    const {
-        rating,
-        sku,
-        name,
-        price,
-        image,
-        stock,
-        qty,
-        categoryName,
-        description,
-        id,
-    } = props
+    const { rating, sku, name, price, image, stock, qty, id } = props
     const [wishlist, setWishlist] = useState(null)
     const [wishlistIds, setWishlistIds] = useState(null)
     const [addCart, setAddCart] = useState(null)
+    const quntity = 0
 
-    console.log('wishlistIds', wishlistIds)
+    const button = useMemo(() => {
+        if (stock === 'IN_STOCK') {
+            return (
+                <Button
+                    className={classes.action}
+                    priority="high"
+                    type="submit"
+                    onClick={() => {
+                        setAddCart(id)
+                    }}
+                >
+                    ADD TO CARD
+                </Button>
+            )
+        }
+        if (stock === 'OUT_OF_STOCK') {
+            return (
+                <Button
+                    className={classes.action}
+                    priority="high"
+                    type="submit"
+                    disabled
+                >
+                    OUT OF STOCK
+                </Button>
+            )
+        }
+        if (quntity > 0) {
+            return (
+                <Button
+                    className={classes.action}
+                    priority="high"
+                    type="submit"
+                    onClick={() => {
+                        console.log('clicked')
+                        setAddCart(id)
+                    }}
+                >
+                    ADD TO CARD
+                </Button>
+            )
+        }
+    }, [id, stock])
+
     return (
         <div className={classes.productCard}>
             <div
@@ -41,28 +74,8 @@ const ProductCard = (props) => {
                 <FaIndianRupeeSign size={13} color={'#161a30'} />
                 {price}
             </div>
-            {stock === 'IN_STOCK' ? (
-                <Button
-                    className={classes.action}
-                    priority="high"
-                    type="submit"
-                    onClick={() => {
-                        console.log('clicked')
-                        setAddCart(id)
-                    }}
-                >
-                    ADD TO CARD
-                </Button>
-            ) : (
-                <Button
-                    className={classes.action}
-                    priority="high"
-                    type="submit"
-                    disabled
-                >
-                    OUT OF STOCK
-                </Button>
-            )}
+            <div>{rating}</div>
+            {button}
         </div>
     )
 }
