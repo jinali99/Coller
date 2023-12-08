@@ -14,7 +14,6 @@ const Header = () => {
     // const { isMobile } = useWindowSize();
     const navigate = useNavigate()
     const counter = useSelector(cartCounter)
-    console.log('🚀 ~ file: header.js:17 ~ Header ~ counter:', counter)
     const cartItemCounter = counter.reduce(
         (accumulator, currentValue) => accumulator + currentValue.cartQuntity,
         0,
