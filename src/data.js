@@ -8,6 +8,9 @@ export const ProductData = [
         sku: 'slimdrawerbox',
         id: 1,
         image: '/Images/slimdrawerbox.jpeg',
+        qty: 25,
+        rating: 5,
+        stock: 'IN_STOCK',
     },
     {
         categoryName: 'slimdrawerbox',
@@ -18,6 +21,9 @@ export const ProductData = [
         sku: 'slimdrawerbox',
         id: 2,
         image: '/Images/slimdrawerbox.jpeg',
+        qty: 25,
+        rating: 5,
+        stock: 'OUT_OF_STOCK',
     },
     {
         categoryName: 'tandomdrawerbox',
@@ -28,6 +34,9 @@ export const ProductData = [
         id: 3,
         sku: 'tandomdrawerbox',
         image: '/Images/tandomdrawerbox.png',
+        qty: 25,
+        rating: 5,
+        stock: 'IN_STOCK',
     },
     {
         categoryName: 'pulldown',
@@ -38,6 +47,9 @@ export const ProductData = [
         id: 4,
         sku: 'pulldown',
         image: '/Images/pulldown.jpg',
+        qty: 25,
+        rating: 5,
+        stock: 'IN_STOCK',
     },
     {
         categoryName: 'cutlery',
@@ -48,6 +60,9 @@ export const ProductData = [
         id: 5,
         sku: 'cutlery',
         image: '/Images/cutlery.jpeg',
+        qty: 25,
+        rating: 5,
+        stock: 'IN_STOCK',
     },
     {
         categoryName: 'pantry',
@@ -58,6 +73,9 @@ export const ProductData = [
         sku: 'pantry',
         id: 6,
         image: '/Images/pantry.jpg',
+        qty: 25,
+        rating: 5,
+        stock: 'IN_STOCK',
     },
     {
         categoryName: 'elevator',
@@ -68,6 +86,9 @@ export const ProductData = [
         sku: 'elevator',
         id: 7,
         image: '/Images/elevator.jpg',
+        qty: 25,
+        rating: 5,
+        stock: 'IN_STOCK',
     },
     {
         categoryName: 'quadrochannel',
@@ -78,6 +99,9 @@ export const ProductData = [
         sku: 'quadrochannel',
         id: 8,
         image: '/Images/quadrochannel.jpg',
+        qty: 25,
+        rating: 5,
+        stock: 'IN_STOCK',
     },
     {
         categoryName: 'kitchenaccesories',
@@ -88,6 +112,9 @@ export const ProductData = [
         id: 9,
         sku: 'kitchenaccesories',
         image: '/Images/kitchenaccesories.jpeg',
+        qty: 25,
+        rating: 5,
+        stock: 'IN_STOCK',
     },
     {
         categoryName: 'hingeseriesunit',
@@ -98,6 +125,9 @@ export const ProductData = [
         id: 10,
         sku: 'hingeseriesunit',
         image: '/Images/hingeseriesunit.jpg',
+        qty: 25,
+        rating: 5,
+        stock: 'IN_STOCK',
     },
     {
         categoryName: 'rollingshutterbasket',
@@ -108,6 +138,9 @@ export const ProductData = [
         id: 11,
         sku: 'rollingshutterbasket',
         image: '/Images/rollingshutterbasket.jpeg',
+        qty: 25,
+        rating: 5,
+        stock: 'IN_STOCK',
     },
     {
         categoryName: 'doorcloser',
@@ -118,6 +151,9 @@ export const ProductData = [
         sku: 'doorcloser',
         id: 12,
         image: '/Images/doorcloser.jpg',
+        qty: 25,
+        rating: 5,
+        stock: 'IN_STOCK',
     },
     {
         categoryName: 'accesories',
@@ -128,6 +164,9 @@ export const ProductData = [
         sku: 'accesories',
         image: '/Images/kitchenaccesories.jpeg',
         id: 13,
+        qty: 25,
+        rating: 5,
+        stock: 'IN_STOCK',
     },
     {
         categoryName: 'cornersolution',
@@ -138,6 +177,9 @@ export const ProductData = [
         sku: 'cornersolution',
         image: '/Images/cornersolution.jpg',
         id: 14,
+        qty: 25,
+        rating: 5,
+        stock: 'IN_STOCK',
     },
     {
         categoryName: 'tallunit',
@@ -148,5 +190,8 @@ export const ProductData = [
         sku: 'tallunit',
         image: '/Images/tallunit.jpg',
         id: 15,
+        qty: 25,
+        rating: 5,
+        stock: 'IN_STOCK',
     },
 ]

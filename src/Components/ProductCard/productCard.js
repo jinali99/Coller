@@ -5,8 +5,21 @@ import { FaIndianRupeeSign } from 'react-icons/fa6'
 import { FaRegHeart } from 'react-icons/fa'
 
 const ProductCard = (props) => {
+    const {
+        rating,
+        sku,
+        name,
+        price,
+        image,
+        stock,
+        qty,
+        categoryName,
+        description,
+        id,
+    } = props
     const [wishlist, setWishlist] = useState(null)
     const [wishlistIds, setWishlistIds] = useState(null)
+    const [addCart, setAddCart] = useState(null)
 
     console.log('wishlistIds', wishlistIds)
     return (
@@ -14,27 +27,42 @@ const ProductCard = (props) => {
             <div
                 className={classes.wishlist}
                 onClick={() => {
-                    console.log('id', props.id)
+                    console.log('id', id)
                     setWishlist(!wishlist)
-                    setWishlistIds(props.id)
+                    setWishlistIds(id)
                 }}
             >
                 <FaRegHeart size={20} color={'#161a30'} />
             </div>
-            <img src={props.image} alt={props.name} height={200} width={200} />
-            <div className={classes.productName}>{props.name}</div>
+            <img src={image} alt={name} height={200} width={200} />
+            <div className={classes.productName}>{name}</div>
+            <div className={classes.sku}>{sku}</div>
             <div className={classes.productPrice}>
                 <FaIndianRupeeSign size={13} color={'#161a30'} />
-                {props.price}
+                {price}
             </div>
-            <Button
-                className={classes.action}
-                priority="high"
-                type="submit"
-                onClick={() => console.log('clicked')}
-            >
-                Add To Card
-            </Button>
+            {stock === 'IN_STOCK' ? (
+                <Button
+                    className={classes.action}
+                    priority="high"
+                    type="submit"
+                    onClick={() => {
+                        console.log('clicked')
+                        setAddCart(id)
+                    }}
+                >
+                    ADD TO CARD
+                </Button>
+            ) : (
+                <Button
+                    className={classes.action}
+                    priority="high"
+                    type="submit"
+                    disabled
+                >
+                    OUT OF STOCK
+                </Button>
+            )}
         </div>
     )
 }

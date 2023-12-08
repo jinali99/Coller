@@ -29,6 +29,9 @@ const Category = () => {
                                     sku={item.sku}
                                     image={item.image}
                                     id={item.id}
+                                    qty={item.qty}
+                                    stock={item.stock}
+                                    rating={item.rating}
                                 />
                             </div>
                         )

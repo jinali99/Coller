@@ -5,7 +5,7 @@
     column-gap: 10px;
     flex-direction: column;
     align-items: flex-start;
-    row-gap: 10px;
+    row-gap: 5px;
 }
 .productName {
     font-size: 1rem;
@@ -13,8 +13,8 @@
     color: #161a30;
 }
 .price {
-    font-size: 1.1rem;
-    font-weight: 700;
+    font-size: 1rem;
+    font-weight: 500;
     color: #161a30;
 }
 .action {
@@ -37,4 +37,9 @@
     justify-content: flex-end;
     display: flex;
     cursor: pointer;
+}
+.sku {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #161a30;
 }
