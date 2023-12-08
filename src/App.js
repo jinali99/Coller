@@ -60,7 +60,7 @@ function App() {
                     }
                 />
                 <Route
-                    path="/category/:categoryname"
+                    path="/category/:categoryName"
                     element={
                         <Layout>
                             <Category />

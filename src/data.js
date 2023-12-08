@@ -1,4 +1,4 @@
-export const ProductData = [
+export const productData = [
     {
         categoryName: 'slimdrawerbox',
         name: 'slim Drawer Box',
