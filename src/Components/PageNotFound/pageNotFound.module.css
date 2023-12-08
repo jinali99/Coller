@@ -4,6 +4,7 @@
     align-items: center;
     min-height: 80vh;
     color: #161a30;
+    gap: 20px;
 }
 .notFound h2 {
     font-size: 55px;
