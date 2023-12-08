@@ -14,7 +14,11 @@ const Header = () => {
     // const { isMobile } = useWindowSize();
     const navigate = useNavigate()
     const counter = useSelector(cartCounter)
-    console.log('counter', counter)
+    console.log('🚀 ~ file: header.js:17 ~ Header ~ counter:', counter)
+    const cartItemCounter = counter.reduce(
+        (accumulator, currentValue) => accumulator + currentValue.cartQuntity,
+        0,
+    )
 
     return (
         <div className={classes.pageWrapper}>
@@ -48,7 +52,7 @@ const Header = () => {
                 <div onClick={() => navigate('/cart')}>
                     <FaCartShopping size={40} color="#F0ECE5" />
                     <span className={classes.cartCounter}>
-                        {counter.length}
+                        {cartItemCounter}
                     </span>
                 </div>
                 <div onClick={() => navigate('/account')}>
