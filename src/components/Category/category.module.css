@@ -1,5 +1,7 @@
 .container {
     display: flex;
+    background-color: #f0ece5;
+
     flex-wrap: wrap;
     padding: 40px calc((100% - (255px * 3)) / 5);
 }

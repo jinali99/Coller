@@ -6,6 +6,8 @@
     flex-direction: column;
     align-items: flex-start;
     row-gap: 5px;
+    border: 1px #161a30 solid;
+    border-radius: 5px;
 }
 .productName {
     font-size: 1rem;
