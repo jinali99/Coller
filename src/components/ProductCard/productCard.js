@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { addToCart } from '../../data/reducer/cartSlice'
 import { cartItems } from '../../data/selector/cart.selector'
 import { useNavigate } from 'react-router'
+import ReactStars from 'react-rating-stars-component'
 
 const ProductCard = (props) => {
     const { rating, sku, name, price, image, stock, qty, id, categoryName } =
@@ -87,7 +88,14 @@ const ProductCard = (props) => {
                 <FaIndianRupeeSign size={13} color={'#161a30'} />
                 {price}
             </div>
-            <div>{rating}</div>
+            <div>
+                <ReactStars
+                    value={rating}
+                    size={24}
+                    activeColor="#161a30"
+                    edit={false}
+                />
+            </div>
             {button}
         </div>
     )

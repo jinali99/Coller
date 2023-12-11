@@ -22,7 +22,7 @@ export const productData = [
         id: 2,
         image: '/Images/slimdrawerbox.jpeg',
         qty: 25,
-        rating: 5,
+        rating: 2,
         stock: 'OUT_OF_STOCK',
     },
     {
@@ -48,7 +48,7 @@ export const productData = [
         sku: 'pulldown',
         image: '/Images/pulldown.jpg',
         qty: 25,
-        rating: 5,
+        rating: 1,
         stock: 'IN_STOCK',
     },
     {
@@ -61,7 +61,7 @@ export const productData = [
         sku: 'cutlery',
         image: '/Images/cutlery.jpeg',
         qty: 25,
-        rating: 5,
+        rating: 4,
         stock: 'IN_STOCK',
     },
     {
@@ -74,7 +74,7 @@ export const productData = [
         id: 6,
         image: '/Images/pantry.jpg',
         qty: 25,
-        rating: 5,
+        rating: 3,
         stock: 'IN_STOCK',
     },
     {
@@ -87,7 +87,7 @@ export const productData = [
         id: 7,
         image: '/Images/elevator.jpg',
         qty: 25,
-        rating: 5,
+        rating: 4,
         stock: 'IN_STOCK',
     },
     {
@@ -100,7 +100,7 @@ export const productData = [
         id: 8,
         image: '/Images/quadrochannel.jpg',
         qty: 25,
-        rating: 5,
+        rating: 2,
         stock: 'IN_STOCK',
     },
     {
@@ -113,7 +113,7 @@ export const productData = [
         sku: 'kitchenaccesories',
         image: '/Images/kitchenaccesories.jpeg',
         qty: 25,
-        rating: 5,
+        rating: 3,
         stock: 'IN_STOCK',
     },
     {
@@ -152,7 +152,7 @@ export const productData = [
         id: 12,
         image: '/Images/doorcloser.jpg',
         qty: 25,
-        rating: 5,
+        rating: 1,
         stock: 'IN_STOCK',
     },
     {
@@ -165,7 +165,7 @@ export const productData = [
         image: '/Images/kitchenaccesories.jpeg',
         id: 13,
         qty: 25,
-        rating: 5,
+        rating: 4,
         stock: 'IN_STOCK',
     },
     {
@@ -178,7 +178,7 @@ export const productData = [
         image: '/Images/cornersolution.jpg',
         id: 14,
         qty: 25,
-        rating: 5,
+        rating: 3,
         stock: 'IN_STOCK',
     },
     {
@@ -191,7 +191,7 @@ export const productData = [
         image: '/Images/tallunit.jpg',
         id: 15,
         qty: 25,
-        rating: 5,
+        rating: 2,
         stock: 'IN_STOCK',
     },
 ]
