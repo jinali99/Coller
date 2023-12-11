@@ -12,9 +12,7 @@ const Cart = () => {
     const dispatch = useDispatch()
 
     const cartList = useMemo(() => {
-        if (!cartItem.length) {
-            return <div className={classes.emptyCarttext}>Cart is Empty</div>
-        } else {
+        if (cartItem.length) {
             return cartItem.map((item) => {
                 return (
                     <div key={item.id} className={classes.cartItems}>
@@ -23,6 +21,8 @@ const Cart = () => {
                 )
             })
         }
+
+        return <div className={classes.emptyCart}>Cart is Empty</div>
     }, [cartItem])
 
     return (
