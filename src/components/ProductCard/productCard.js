@@ -3,12 +3,20 @@ import classes from './productCard.module.css'
 import Button from '../Button/button'
 import { FaIndianRupeeSign } from 'react-icons/fa6'
 import { FaRegHeart } from 'react-icons/fa'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { addToCart } from '../../data/reducer/cartSlice'
+import { cartItems } from '../../data/selector/cart.selector'
 
 const ProductCard = (props) => {
     const { rating, sku, name, price, image, stock, qty, id, categoryName } =
         props
+    console.log('🚀 ~ file: productCard.js:12 ~ ProductCard ~ props:', props)
+    const cartItem = useSelector(cartItems)
+    console.log(
+        '🚀 ~ file: productCard.js:15 ~ ProductCard ~ cartItem:',
+        cartItem,
+    )
+
     const [wishlist, setWishlist] = useState(null)
     const [wishlistIds, setWishlistIds] = useState(null)
     const dispatch = useDispatch()

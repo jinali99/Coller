@@ -22,7 +22,6 @@ const Category = () => {
                 return (
                     <div className={classes.productCardWrapper} key={item.id}>
                         <ProductCard
-                            key={item.sku}
                             categoryName={item.categoryName}
                             name={item.name}
                             price={item.price}

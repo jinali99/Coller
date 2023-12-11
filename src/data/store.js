@@ -1,16 +1,7 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit'
 import cartReducer from './reducer/cartSlice'
 import storage from 'redux-persist/lib/storage'
-import {
-    FLUSH,
-    PAUSE,
-    PERSIST,
-    PURGE,
-    REGISTER,
-    REHYDRATE,
-    persistReducer,
-    persistStore,
-} from 'redux-persist'
+import { persistReducer, persistStore } from 'redux-persist'
 
 const persistConfig = {
     key: 'root',

@@ -21,7 +21,7 @@ const Header = () => {
 
     return (
         <div className={classes.pageWrapper}>
-            <div className={classes.logo}>
+            <div className={classes.logo} onClick={() => navigate('/')}>
                 <img
                     src={'/Images/logo.png'}
                     alt="logo"
