@@ -37,6 +37,26 @@ const ProductCard = (props) => {
     }, [dispatch, product])
 
     const button = useMemo(() => {
+        if (cartItem.length > 0) {
+            cartItem.map((item) => {
+                const productId = item.id === id
+                const productQuntity = item.cartQuntity
+                console.log('productId', { productId, productQuntity })
+                return (
+                    <Button
+                        className={classes.action}
+                        priority="high"
+                        type="submit"
+                        onClick={() => {
+                            handleAddToCart()
+                        }}
+                    >
+                        {item.cartQuntity}
+                    </Button>
+                )
+            })
+        }
+
         if (stock === 'IN_STOCK') {
             return (
                 <Button

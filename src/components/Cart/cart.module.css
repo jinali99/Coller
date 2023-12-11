@@ -1,11 +1,12 @@
 .container {
     display: flex;
 }
-.cardWrapper {
+.cartWrapper {
     max-width: 250px;
     padding: 20px;
     display: flex;
     align-items: flex-start;
+    cursor: pointer;
 }
 .cartContainer {
     background-color: #f0ece5;
