@@ -1,8 +1,8 @@
 import React, { useMemo } from 'react'
 import { useSelector } from 'react-redux'
 import { cartItems } from '../../data/selector/cart.selector'
-import ProductCard from '../ProductCard/productCard'
 import classes from './cart.module.css'
+import ProductCard from '../ProductCard/productCard'
 const Cart = () => {
     const cartItem = useSelector(cartItems)
 
