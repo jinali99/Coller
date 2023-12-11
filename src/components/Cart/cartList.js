@@ -3,9 +3,12 @@ import classes from './cartList.module.css'
 import { FaIndianRupeeSign } from 'react-icons/fa6'
 import { MdDelete } from 'react-icons/md'
 import { useNavigate } from 'react-router'
+import { removeFromCart } from '../../data/reducer/cartSlice'
+import { useDispatch } from 'react-redux'
 
 const CartList = (item) => {
     const navigate = useNavigate()
+    const dispatch = useDispatch()
     return (
         <div className={classes.cartListWrapper}>
             <div
@@ -29,7 +32,13 @@ const CartList = (item) => {
                     {item.item.cartQuntity}
                 </div>
             </div>
-            <div className={classes.rightcontain}>
+            <div
+                className={classes.rightcontain}
+                onClick={() => {
+                    dispatch(removeFromCart(item.item.id))
+                    console.log('cartlist -->', item.item.id)
+                }}
+            >
                 <MdDelete size={24} color="#161a30" />
             </div>
         </div>
