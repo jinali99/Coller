@@ -1,5 +1,33 @@
 .cartListWrapper {
     gap: 30px;
-    min-height: 200px;
-    background-color: aqua;
+    min-height: 100px;
+    display: flex;
 }
+.leftContain {
+    cursor: pointer;
+}
+.middleContain {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: #161a30;
+}
+.productName {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+.productPrice {
+    font-size: 1rem;
+}
+.cartQuntity {
+}
+.rightcontain {
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    color: #161a30;
+    display: flex;
+    align-content: flex-end;
+    position: absolute;
+    top: 8px;
+    right: 16px;}

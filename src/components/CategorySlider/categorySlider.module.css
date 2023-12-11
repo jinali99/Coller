@@ -10,7 +10,7 @@
 .title {
     font-weight: 700;
     font-size: 1.5rem;
-    color: #31304d;
+    color: #161a30;
     text-align: center;
     align-items: center;
     padding: 30px;
@@ -33,7 +33,7 @@
     align-items: center;
 }
 .categoryName {
-    color: #31304d;
+    color: #161a30;
     font-weight: 500;
     font-size: 1.1rem;
 }

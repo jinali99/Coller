@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #31304d;
+    background-color: #161a30;
     color: #f0ece5;
 }
 .logo {
@@ -37,7 +37,7 @@
     justify-content: center;
     align-items: center;
     background-color: #f0ece5;
-    color: #31304d;
+    color: #161a30;
     border-radius: 50%;
     font-size: 1rem;
 }
