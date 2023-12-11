@@ -1,5 +1,6 @@
 import React, { useRef } from 'react'
 import { useButton } from 'react-aria'
+import classess from './button.module.css'
 
 const Button = (props) => {
     const {
@@ -25,7 +26,12 @@ const Button = (props) => {
     )
     return (
         <div>
-            <button {...buttonProps} {...restProps} ref={buttonRef}>
+            <button
+                {...buttonProps}
+                {...restProps}
+                ref={buttonRef}
+                className={classess.action}
+            >
                 {!loading ? children : 'loading'}
             </button>
         </div>

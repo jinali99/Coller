@@ -1,0 +1,30 @@
+.container {
+    display: flex;
+    /* max-width: 400px; */
+    flex-wrap: wrap;
+    padding: 50px calc((100% - (255px * 3)) / 5);
+}
+.cartWrapper {
+    max-width: 250px;
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    cursor: pointer;
+}
+.cartContainer {
+    background-color: #f0ece5;
+    flex-direction: column;
+    padding: 20px;
+    display: flex;
+    column-gap: 10px;
+    row-gap: 5px;
+}
+.emptyCart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 80vh;
+    color: #161a30;
+    gap: 20px;
+}

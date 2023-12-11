@@ -6,17 +6,13 @@ import { FaRegHeart } from 'react-icons/fa'
 import { useDispatch, useSelector } from 'react-redux'
 import { addToCart } from '../../data/reducer/cartSlice'
 import { cartItems } from '../../data/selector/cart.selector'
+import { useNavigate } from 'react-router'
 
 const ProductCard = (props) => {
     const { rating, sku, name, price, image, stock, qty, id, categoryName } =
         props
-    console.log('🚀 ~ file: productCard.js:12 ~ ProductCard ~ props:', props)
     const cartItem = useSelector(cartItems)
-    console.log(
-        '🚀 ~ file: productCard.js:15 ~ ProductCard ~ cartItem:',
-        cartItem,
-    )
-
+    const navigate = useNavigate()
     const [wishlist, setWishlist] = useState(null)
     const [wishlistIds, setWishlistIds] = useState(null)
     const dispatch = useDispatch()
@@ -41,7 +37,6 @@ const ProductCard = (props) => {
             cartItem.map((item) => {
                 const productId = item.id === id
                 const productQuntity = item.cartQuntity
-                console.log('productId', { productId, productQuntity })
                 return (
                     <Button
                         className={classes.action}
@@ -98,7 +93,13 @@ const ProductCard = (props) => {
             >
                 <FaRegHeart size={20} color={'#161a30'} />
             </div>
-            <img src={image} alt={name} height={200} width={200} />
+            <img
+                onClick={() => navigate(`/category/${categoryName}`)}
+                src={image}
+                alt={name}
+                height={200}
+                width={200}
+            />
             <div className={classes.productName}>{name}</div>
             <div className={classes.sku}>{sku}</div>
             <div className={classes.productPrice}>

@@ -1,0 +1,5 @@
+.cartListWrapper {
+    gap: 30px;
+    min-height: 200px;
+    background-color: aqua;
+}

@@ -17,21 +17,7 @@
     font-weight: 500;
     color: #161a30;
 }
-.action {
-    min-width: 200px;
-    min-height: 40px;
-    background-color: #161a30;
-    color: #f0ece5;
-    font-size: 1rem;
-    font-weight: 550;
-    cursor: pointer;
-    border: 1px solid #161a30;
-}
-.action:hover {
-    background-color: #f0ece5;
-    color: #161a30;
-    border: 1px solid #161a30;
-}
+
 .wishlist {
     width: 100%;
     justify-content: flex-end;
