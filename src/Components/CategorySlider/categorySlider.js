@@ -53,7 +53,7 @@ const CategorySlider = () => {
                     >
                         {categorySlider.map((item, index) => (
                             <SwiperSlide key={index}>
-                                <div onClick={() => navigate(item.url)}>
+                                <div onClick={() => navigate(item.url)} className={classes.slider}>
                                     <img
                                         src={'/Images/categoryImage.jpeg'}
                                         alt={index}

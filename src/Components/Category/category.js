@@ -25,7 +25,6 @@ const Category = () => {
                             key={item.sku}
                             categoryName={item.categoryName}
                             name={item.name}
-                            description={item.description}
                             price={item.price}
                             sku={item.sku}
                             image={item.image}

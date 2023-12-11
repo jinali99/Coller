@@ -1,1 +1,1 @@
-export const cartCounter = (store) => store.cart.cartItem
+export const cartItems = (store) => store.cart.cartItem

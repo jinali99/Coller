@@ -4,6 +4,9 @@
 .swiperContain {
     padding-bottom: 20px;
 }
+.slider {
+    cursor: pointer;
+}
 .title {
     font-weight: 700;
     font-size: 1.5rem;

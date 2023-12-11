@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react'
+import React, { useCallback, useMemo, useState } from 'react'
 import classes from './productCard.module.css'
 import Button from '../Button/button'
 import { FaIndianRupeeSign } from 'react-icons/fa6'
@@ -7,15 +7,26 @@ import { useDispatch } from 'react-redux'
 import { addToCart } from '../../data/reducer/cartSlice'
 
 const ProductCard = (props) => {
-    const { rating, sku, name, price, image, stock, qty, id } = props
+    const { rating, sku, name, price, image, stock, qty, id, categoryName } =
+        props
     const [wishlist, setWishlist] = useState(null)
     const [wishlistIds, setWishlistIds] = useState(null)
     const dispatch = useDispatch()
-    const product = { id, name, price, qty, sku, stock, image }
-
-    const handleAddToCart = () => {
-        dispatch(addToCart(product))
+    const product = {
+        id,
+        name,
+        price,
+        qty,
+        sku,
+        stock,
+        image,
+        categoryName,
+        rating,
     }
+
+    const handleAddToCart = useCallback(() => {
+        dispatch(addToCart(product))
+    }, [dispatch, product])
 
     const button = useMemo(() => {
         if (stock === 'IN_STOCK') {
@@ -28,7 +39,7 @@ const ProductCard = (props) => {
                         handleAddToCart()
                     }}
                 >
-                    ADD TO CARD
+                    ADD TO CART
                 </Button>
             )
         }
@@ -44,6 +55,7 @@ const ProductCard = (props) => {
                 </Button>
             )
         }
+        return null
     }, [handleAddToCart, stock])
 
     return (

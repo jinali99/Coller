@@ -6,14 +6,14 @@ import { IoIosHeartEmpty } from 'react-icons/io'
 import { MdAccountCircle } from 'react-icons/md'
 import { FaCartShopping } from 'react-icons/fa6'
 import { useSelector } from 'react-redux'
-import { cartCounter } from '../../data/selector/cart.selector'
+import { cartItems } from '../../data/selector/cart.selector'
 
 // import { useWindowSize } from "../../hooks/useWindowSize";
 
 const Header = () => {
     // const { isMobile } = useWindowSize();
     const navigate = useNavigate()
-    const counter = useSelector(cartCounter)
+    const counter = useSelector(cartItems)
     const cartItemCounter = counter.reduce(
         (accumulator, currentValue) => accumulator + currentValue.cartQuntity,
         0,
