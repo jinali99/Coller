@@ -15,11 +15,11 @@
     max-height: 300px;
     min-height: 100px;
     width: 100%;
+    overflow-y: scroll;
 }
 .cartItems {
     background-color: #f0ece5;
     border: 1px solid #161a30;
-    overflow-y: scroll;
     border-radius: 5px;
     padding: 10px;
     display: flex;

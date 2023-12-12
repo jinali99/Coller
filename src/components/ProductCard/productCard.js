@@ -8,7 +8,7 @@ import { addToCart } from '../../data/reducer/cartSlice'
 import { cartItems } from '../../data/selector/cart.selector'
 import { useNavigate } from 'react-router'
 import ReactStars from 'react-rating-stars-component'
-
+import AddToCartBtn from '../AddToCartButton/addToCartBtn'
 const ProductCard = (props) => {
     const { rating, sku, name, price, image, stock, qty, id, categoryName } =
         props
@@ -32,36 +32,6 @@ const ProductCard = (props) => {
     const handleAddToCart = useCallback(() => {
         dispatch(addToCart(product))
     }, [dispatch, product])
-
-    const button = useMemo(() => {
-        if (stock === 'IN_STOCK') {
-            return (
-                <Button
-                    className={classes.action}
-                    priority="high"
-                    type="submit"
-                    onClick={() => {
-                        handleAddToCart()
-                    }}
-                >
-                    ADD TO CART
-                </Button>
-            )
-        }
-        if (stock === 'OUT_OF_STOCK') {
-            return (
-                <Button
-                    className={classes.action}
-                    priority="high"
-                    type="submit"
-                    disabled
-                >
-                    OUT OF STOCK
-                </Button>
-            )
-        }
-        return null
-    }, [handleAddToCart, stock])
 
     return (
         <div className={classes.productCard}>
@@ -96,7 +66,7 @@ const ProductCard = (props) => {
                     edit={false}
                 />
             </div>
-            {button}
+            <AddToCartBtn isInStock={stock} handleAddToCart={handleAddToCart} />
         </div>
     )
 }
