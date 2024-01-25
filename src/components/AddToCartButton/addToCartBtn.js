@@ -1,9 +1,17 @@
 import React, { useMemo } from 'react'
 import Button from '../Button/button'
 import classes from './addToCartBtn.module.css'
+import { useSelector } from 'react-redux'
+import { cartItems } from './../../data/selector/cart.selector'
+const AddToCartBtn = ({ sku, handleAddToCart }) => {
+    const cartItem = useSelector(cartItems)
 
-const AddToCartBtn = ({ isInStock, handleAddToCart }) => {
     const addCartBtn = useMemo(() => {
+        console.log('sku--->', sku)
+        // cartItem.map((item) =>){
+        //     const isSkuSame = item.sku
+        // }
+
         // if (isInStock === 'IN_STOCK') {
         //     return (
         //         <Button
@@ -31,9 +39,9 @@ const AddToCartBtn = ({ isInStock, handleAddToCart }) => {
         //     )
         // }
         return null
-    }, [])
+    }, [cartItem, sku])
 
-    return <div>add to cart BTN</div>
+    return <div>{addCartBtn}</div>
 }
 
 export default AddToCartBtn

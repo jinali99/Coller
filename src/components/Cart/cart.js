@@ -12,7 +12,7 @@ const Cart = () => {
     const dispatch = useDispatch()
 
     const cartList = useMemo(() => {
-        if (cartItem.length) {
+        if (cartItem.length > 0) {
             return cartItem.map((item) => {
                 return (
                     <div key={item.id} className={classes.cartItems}>

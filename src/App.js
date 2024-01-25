@@ -12,6 +12,8 @@ import Account from './components/Account/account'
 import Wishlist from './components/Wishlist/wishlist'
 import Cart from './components/Cart/cart'
 import PageNotFound from './components/PageNotFound/pageNotFound'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 const Layout = (props) => {
     return (
@@ -26,6 +28,7 @@ const Layout = (props) => {
 function App() {
     return (
         <BrowserRouter>
+            <ToastContainer />
             <Routes>
                 <Route
                     path="/"
